@@ -8,111 +8,192 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="left">
-        <img src="/img/logo.png" alt="logo" class="logo">
-        <span class="logo-text"><b>cat</b> energy</span>
-        <div class="content-header">
+<nav class="navigation navigation_main">
+    <div class="layout navigation_layout">
+        <div class="logo">
+            <img src="./img/logo-desktop.svg" alt="Energy Catalog Logo" />
+        </div>
+        <ul class="menu">
+            <li class="menu_item">
+                <a class="menu_item_link active" href="#">Главная</a>
+            </li>
+            <li class="menu_item">
+                <a class="menu_item_link" href="#">Каталог продукции</a>
+            </li>
+            <li class="menu_item">
+                <a class="menu_item_link" href="#">Подбор программы</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header class="header">
+    <div class="header_row header_row_left">
+        <div class="header_content">
             <h1 class="h1-header">Функциональное <br>питание для котов</h1>
             <h3 class="h3-header">Занялся собой? Займись котом!</h3>
             <button class="bth-header">Подобрать программу</button>
         </div>
     </div>
-    <div class="right">
-        <nav>
-            <div class="navigation-links">
-                <a href="">Главная</a>
-                <a href="">Каталог продукции</a>
-                <a href="">Подбор программы</a>
-            </div>
-        </nav>
-        <img src="./img/img.png" alt="Стакан с едой" class="center-image-header">
+    <div class="header_row header_row_right">
+        <div class="header_img">
+            <img src="./img/img.png" alt="Стакан с едой" class="center-image-header">
+        </div>
     </div>
-
 </header>
 <section class="section-1">
-    <div class="big-div">
-            <img src="./img/img_1.png" alt="котик" class="logo">
-            <h2 class="inline-block">Похудение</h2>
-            <p>
+    <div class="layout space-between">
+        <div class="big-div">
+
+            <div class="big-div-name">
+                <img src="./img/cat-black.svg" alt="котик" class="logo-cats1">
+                <h2 class="inline-block big-div-h2">Похудение</h2>
+            </div>
+            <p class="section-1-p">
                 Ваш кот весит больше собаки и почти утратил способность<br>
                 лазить по деревьям? Пора на диету! Cat Energy Slim поможет<br>
                 вашему питомцу сбросить лишний вес.
             </p>
-        <button class="button-big-div">
-            каталог slim
-        </button>
-    </div>
-    <div class="big-div">
-        <img src="./img/img_1.png" alt="котик-убийца" class="logo">
-        <h2 class="inline-block">Набор массы</h2>
-        <p>
-            Заработать авторитет среди дворовых котов и даже собак?<br>
-            Серия Cat Energy Pro поможет вашему коту нарастить<br>
-            необходимые мышцы!
-        </p>
-        <button class="button-big-div">
-            каталог pro
-        </button>
-    </div>
 
+            <a href="#" class="big-div-link">
+                каталог slim
+                <img src="./img/arrow.svg" alt="" class="img-arrow">
+            </a>
+        </div>
+        <div class="big-div">
+
+            <div class="big-div-name">
+                <img src="./img/tiger-black.svg" alt="котик-убийца" class="logo-cats1">
+                <h2 class="inline-block big-div-h2">Набор массы</h2>
+            </div>
+            <p class="text-16">
+                Заработать авторитет среди дворовых котов и даже собак?<br>
+                Серия Cat Energy Pro поможет вашему коту нарастить<br>
+                необходимые мышцы!
+            </p>
+
+            <a href="#" class="big-div-link">
+                каталог pro
+                <img src="./img/arrow.svg" alt="" class="img-arrow">
+            </a>
+        </div>
+    </div>
 </section>
 <section class="section-2">
-    <h1>Как это работает?</h1>
-    <div class="div-section-3">
+    <div class="layout">
+        <h1 class="section-3-h1">Как это работает?</h1>
+        <div class="section3-flex">
+            <div class="div-section-3">
+                <img src="./img/green.svg" alt="" class="logos" width="100">
+<!--                <div class="test">-->
 
-        <img src="./img/img_2.png" alt="" class="logo" width="80">
-        <div class="z-index-1">1</div>
-        <p class="text-24">
-            Функциональное питание<br>
-            содержит только полезные<br>
-            питательные вещества.
-        </p>
+<!--                    <div class="z-index-1">1</div>-->
+<!--                </div>-->
+                <p class="text-16">
+                    Функциональное питание<br>
+                    содержит только полезные<br>
+                    питательные вещества.
+                </p>
 
-    </div>
-    <div class="div-section-3">
+            </div>
+            <div class="div-section-3">
 
-        <img src="./img/img_2.png" alt="" class="logo" width="80">
-        <div class="z-index-1">2</div>
-        <p class="text-24">
-            Выпускается в виде порошка,<br>
-            который нужно лишь залить<br>
-            кипятком и готово.
-        </p>
+                <img src="./img/green1.svg" alt="" class="logos" width="100">
+<!--                <div class="z-index-1">2</div>-->
+                <p class="text-16">
+                    Выпускается в виде порошка,<br>
+                    который нужно лишь залить<br>
+                    кипятком и готово.
+                </p>
 
-    </div>
-    <div class="div-section-3">
+            </div>
+            <div class="div-section-3">
 
-        <img src="./img/img_2.png" alt="" class="logo" width="80">
-        <div class="z-index-1">3</div>
-        <p class="text-24">
-            Замените один-два приема<br>
-            обычной еды на наше<br>
-            функциональное питание.
-        </p>
+                <img src="./img/green2.svg" alt="" class="logos" width="80">
+<!--                <div class="z-index-1">3</div>-->
+                <p class="text-16">
+                    Замените один-два приема<br>
+                    обычной еды на наше<br>
+                    функциональное питание.
+                </p>
 
-    </div>
-    <div class="div-section-3">
+            </div>
+            <div class="div-section-3">
 
-        <img src="./img/img_2.png" alt="" class="logo" width="80">
-        <div class="z-index-1">4</div>
-        <p class="text-24">
-            Уже через месяц наслаждайтесь<br>
-            изменениями к лучшему<br>
-            вашего питомца!
-        </p>
+                <img src="./img/green3.svg" alt="" class="logos" width="80">
+<!--                <div class="z-index-1">4</div>-->
+                <p class="text-16">
+                    Уже через месяц наслаждайтесь<br>
+                    изменениями к лучшему<br>
+                    вашего питомца!
+                </p>
 
+            </div>
+        </div>
     </div>
 
 </section>
 <section>
+    <div class="layout">
+        <h1 class="margin-top-76">
+            Живой пример
+        </h1>
+        <div class="boris-text">
+            <p>
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой<br>
+                обычный корм на Cat Energy Slim. Отличный результат<br>
+                без изнуряющих тренировок! При этом он не менял своих<br>
+                привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <div class="boris-column">
+                <div class="boris-flex">
+                    <div class="section-3-block1">
+                        <p>5 кг</p>
+                        <div class="border-minus">
+                            <p>Снижение веса</p>
+                        </div>
+                    </div>
 
+
+                    <div class="section-3-block1">
+                        <p>60 дней</p>
+                        <div class="border-minus">
+                            <p>Затрачено времени</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-eat">
+                    <div class="boris-eat">
+                        Затраты на питание
+                    </div>
+                    <div class="boris-eat">
+                        15 000 РУБ.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 <section>
-
+    <div class="layout map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.2816448710721!2d33.465705815051656!3d44.5944364171522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40953ddd939c3c1b%3A0x2e1e175df3143a29!2z0KDQuNCw0LvRjNGC0L4gLSDRjdC60YHQv9C10YDRgtC90L7RgdGC0Ywg0LIg0L3QtdC00LLQuNC20LjQvNC-0YHRgtC4!5e0!3m2!1sru!2s!4v1659432785614!5m2!1sru!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 </section>
 <footer>
-
+<div class="layout">
+    <div class="footer">
+        <div class="logo">
+            <img src="./img/footer-logo.svg" alt="Footer Logo" />
+        </div>
+        <div class="social-network">
+            <a href="vk.com"><img src="./img/vk.svg" alt="vk"></a>
+            <a href="instagram.com"><img src="./img/inst.svg" alt="inst"></a>
+            <a href="facebook.com"><img src="./img/fb.svg" alt="fb"></a>
+        </div>
+        <div class="academy"><p>academy</p></div>
+    </div>
+</div>
 </footer>
 </body>
 </html>
