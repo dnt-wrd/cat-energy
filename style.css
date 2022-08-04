@@ -19,7 +19,7 @@ html {
 .layout {
     /*border: 1px solid red;*/
     /*поправил ширину для красоты*/
-    max-width: 1440px;
+    max-width: 1220px;
     width: 100%;
     margin: 0 auto;
 }
@@ -58,14 +58,26 @@ html {
 .menu_item_link {
     text-transform: uppercase;
     color: #FFF;
+    position: relative;
+}
+
+.menu_item_link:hover:after,
+.menu_item_link.active:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: -8px;
 }
 
 .menu_item_link.active {
-    border-bottom: solid white;
+    /*border-bottom: solid white;*/
 }
 
 .menu_item_link:hover {
-    border-bottom: solid orange;
+    /*border-bottom: solid orange;*/
 }
 
 /* Header */
@@ -329,8 +341,10 @@ header {
 }
 
 .boris-column {
+    margin-top: 69px;
+    column-gap: 80px;
+
     display: flex;
-    flex-direction: column;
 }
 
 .boris-eat {
@@ -359,3 +373,175 @@ header {
     margin: 0 28px;
 }
 
+/*Card Info*/
+.card-info-wrap {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    column-gap: 80px;
+
+    display: flex;
+}
+.card-info {
+    background: #F2F2F2;
+    width: 100%;
+    padding: 47px 52px 59px;
+}
+
+.card-info-title-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.card-info-title {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.card-info-circle {
+    width: 100px;
+    height: 100px;
+    background: #68B738;
+    border-radius: 50%;
+    margin-right: 62px;
+    position: relative;
+}
+
+.card-info-description {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 27px;
+}
+
+.card-info-link {
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.card-info-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.margin-32px {
+    margin-bottom: 32px;
+}
+
+.small-card {
+    padding: 40px 30px 5px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-card-square {
+    width: 80px;
+    height: 80px;
+    background: #68B738;
+    position: relative;
+}
+
+.small-card-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.small-card-text {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-top: 31px;
+
+    z-index: 100;
+
+    position: relative;
+    left: 0;
+    top: -151px;
+}
+
+.test-z {
+    display: flex;
+    justify-content: space-between;
+}
+
+.test-zz {
+    margin-left: 118px;
+    font-size: 280px;
+    z-index: -100;
+    content: "";
+}
+
+.number {
+z-index: 0;
+
+}
+
+.small-card-header {
+    display: flex;
+    /* margin-left: 48px; */
+    justify-content: space-between;
+}
+
+.border-boris {
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    padding: 15px 57px 20px;
+    position: relative;
+}
+
+.text-boris {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.border-text {
+    text-transform: uppercase;
+    font-size: 10px;
+    position: absolute;
+
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+
+    background-color: #F2F2F2;
+}
+
+.pitanie {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+
+    display: flex;
+    column-gap: 63px;
+
+
+
+    /*margin-left: 110px;*/
+    margin-top:35px;
+    margin-bottom: 75px;
+}
