@@ -990,35 +990,98 @@ li {
 .big-grid-add-products {
     display: grid;
     grid-template-columns: 3fr 1fr ;
+    grid-template: "el1 pic" 1fr
+                    "el2 pic" 1fr
+                    "el3 pic" 1fr
+                    "el4 pic" 1fr
+;
 
     /*grid-template-rows: repeat(4, 1fr);*/
     column-gap: 80px;
-    /*grid-template: "element-grid pic" 1fr*/
-    /*                "element-grid pic" 1fr*/
-    /*                "element-grid pic" 1fr*/
-    /*                "element-grid pic" 1fr*/
-    /*                    / 3fr 1fr;*/
+
+}
+
+.el1{
+    grid-area: el1;
+
+}
+
+.el2 {
+    grid-area: el2;
+}
+
+.el3 {
+    grid-area: el3;
+}
+
+.el4 {
+    grid-area: el4;
 }
 
 .grid-picture {
-    /*grid-area: pic;*/
+    grid-area: pic;
     display: flex;
     align-items: center;
     background-image: url(./img/gift-photo-desktop.svg);
-    /*background-position: top left;*/
+    /* background-position: top left; */
     background-repeat: no-repeat;
-
     width: 245px;
+    height: 289px;
+    justify-content: space-between;
+    border: none;
+    flex-direction: column;
+    /* margin: auto; */
+    padding: 63px 43px 43px;
+
+    cursor: pointer;
 }
 
 .small-grid-element {
-    margin-bottom: 100px;
+    position: relative;
+    /*margin-bottom: 100px;*/
     /*grid-area: element-grid;*/
     display: grid;
     grid-template: "name amount price button-green"
                     / minmax(161px, 325px) minmax(132px, 245px) minmax(80px, 280px) 245px;
 
     /*box-shadow: -4px 0px 0px 4px blue;*/
+}
+
+
+
+.small-grid-element:after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #CDCDCD;
+    position: absolute;
+    bottom: 0px;
+
+    /*top: 0px;*/
+
+}
+
+.top-line:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #CDCDCD;
+    position: absolute;
+    top: 0px;
+
+}
+
+.top-line1:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #CDCDCD;
+    position: absolute;
+    bottom: 0px;
+
 }
 
 .grid-name {
@@ -1078,7 +1141,7 @@ li {
 }
 
 .grid-button {
-    padding: 7px 26px;
+    padding: 0px 17px;
     grid-area: button-green;
 
     border: none;
@@ -1111,9 +1174,72 @@ li {
 
 .hover-hover:hover {
     background: #5EAA2F;
+    /*cursor: url(img/cat-black.svg), auto;*/
 }
 
 .hover-hover:active {
     /*background: red;*/
     opacity: 0.3;
+}
+
+.grid-button-container {
+    display: flex;
+    padding: 15px 0px;
+}
+
+.button-order {
+    cursor: pointer;
+    border: none;
+    padding: 7px;
+    margin: auto;
+    width: 100%;
+    background-color:  #68B738;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    /* basic-white */
+
+    color: #FFFFFF;
+}
+
+.add-products {
+    margin-bottom: 86px;
+}
+
+.grid-big-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+}
+
+.grid-big-button-text {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.grid-picture:hover {
+    background-image: url("./img/ricardo_milas.png");
 }
