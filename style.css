@@ -635,6 +635,8 @@ header {
     margin-top: 180px;
 }
 
+
+
 .grid-catalog {
     display: grid;
     grid-template-columns: repeat(4, 245px);
@@ -681,13 +683,13 @@ header {
     margin: -52px auto 42px
 }
 
-.img-small {
-     width: 161px;
-     height: 172px;
-     margin: -52px auto 42px
- }
+.grid-element img {
+    width: 161px;
+    height: 172px;
+    margin: -52px auto 42px
+}
 
-.img-big {
+.grid-element:nth-child(2n + 2) > img {
     width: 172px;
     height: 202px;
     margin: -80px auto 40px;
@@ -952,6 +954,10 @@ li {
 }
 
 .h3-adds {
+    /*position: absolute;*/
+    position: relative;
+    display: inline-block;
+
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 400;
@@ -972,6 +978,29 @@ li {
 
     margin-bottom: 81px;
 
+    /*background-color: red;*/
+    padding-left: 20px;
+
+    left: -30px;
+}
+
+.relative:after {
+    /*position: absolute;*/
+    /*max-width: 100%;*/
+
+    /*content: "";*/
+    /*display: block;*/
+    /*height: 2px;*/
+    /*width: 100%;*/
+    /*background-color: #68B738;*/
+    /*position: absolute;*/
+    /*top: 18px;*/
+
+    /*z-index: 20;*/
+}
+
+.relative {
+    position: relative;
 }
 
 .mt-0 {
@@ -989,12 +1018,9 @@ li {
 
 .big-grid-add-products {
     display: grid;
-    grid-template-columns: 3fr 1fr ;
-    grid-template: "el1 pic" 1fr
-                    "el2 pic" 1fr
-                    "el3 pic" 1fr
-                    "el4 pic" 1fr
-;
+    grid-template-columns: auto  1fr;
+
+
 
     /*grid-template-rows: repeat(4, 1fr);*/
     column-gap: 80px;
@@ -1019,14 +1045,14 @@ li {
 }
 
 .grid-picture {
-    grid-area: pic;
+    /*grid-area: pic;*/
     display: flex;
     align-items: center;
     background-image: url(./img/gift-photo-desktop.svg);
     /* background-position: top left; */
-    background-repeat: no-repeat;
+    background-repeat: revert;
     width: 245px;
-    height: 289px;
+    height: 100%;
     justify-content: space-between;
     border: none;
     flex-direction: column;
@@ -1034,7 +1060,12 @@ li {
     padding: 63px 43px 43px;
 
     cursor: pointer;
+
+
+
 }
+
+
 
 .small-grid-element {
     position: relative;
@@ -1045,11 +1076,17 @@ li {
                     / minmax(161px, 325px) minmax(132px, 245px) minmax(80px, 280px) 245px;
 
     /*box-shadow: -4px 0px 0px 4px blue;*/
+
+    border-bottom: 1px solid #CDCDCD;
+}
+
+.small-grid-element:first-child {
+    border-top: 1px solid #CDCDCD;
 }
 
 
 
-.small-grid-element:after{
+.small-grid-element1:after{
     content: "";
     display: block;
     height: 1px;
@@ -1062,7 +1099,7 @@ li {
 
 }
 
-.top-line:before {
+.top-line1:before {
     content: "";
     display: block;
     height: 1px;
@@ -1185,6 +1222,7 @@ li {
 .grid-button-container {
     display: flex;
     padding: 15px 0px;
+    grid-area: button-green;
 }
 
 .button-order {
@@ -1208,12 +1246,15 @@ li {
     text-transform: uppercase;
 
     /* basic-white */
-
+    height: 40px;
     color: #FFFFFF;
 }
 
 .add-products {
     margin-bottom: 86px;
+
+    width: 100%;
+    overflow: hidden;
 }
 
 .grid-big-button-container {
@@ -1240,6 +1281,201 @@ li {
     color: #FFFFFF;
 }
 
-.grid-picture:hover {
+.grid-picture1:hover {
     background-image: url("./img/ricardo_milas.png");
+}
+
+.g-l {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+}
+
+.h3-dops {
+    position: absolute;
+    top: -15px;
+    left: 50px;
+    background-color: white;
+
+    padding-left: -40px;
+    margin-left-left: 200px;
+}
+
+
+.h3-adds:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    background: #68B738;
+    top: calc(50% - 1px);
+    left: calc(100% + 25px);
+}
+
+.h3-adds:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    background: #68B738;
+    top: calc(50% - 1px);
+    right: calc(100% + 25px);
+}
+
+.list-left1,
+.list-right1 {
+    text-transform: uppercase;
+}
+
+
+@media all and (max-width: 768px) {
+
+    .logo img {
+        width: 174px;
+    }
+
+    .layout {
+        max-width: 706px;
+        margin: 0 auto;
+    }
+
+    .grid-catalog {
+        grid-template-columns: repeat(2, 324px);
+        column-gap: 60px;
+    }
+
+    .table {
+        grid-area: table-grid;
+    }
+
+    .grid-big-button {
+        grid-area: grid-big-button;
+    }
+
+    .big-grid-add-products {
+        grid-template-columns: 1fr;
+        row-gap: 97px;
+        grid-template: "table-grid"
+                       "grid-big-button";
+    }
+
+    .grid-picture {
+        background-image: url("./img/big-grid-background-button.svg");
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        padding: 58px 0;
+
+    }
+
+    .grid-picture img,
+    .grid-big-button-text {
+        margin: auto;
+    }
+
+    .grid-big-button-text {
+        max-width: 161px;
+        text-align: left;
+    }
+
+    .small-grid-element {
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        /*grid-template-rows: 1fr 1fr;*/
+        grid-template: "name amount price"
+                        "button-green button-green button-green" /
+                        auto 30% 15%;
+
+        border-left: 1px solid #CDCDCD;
+        border-right: 1px solid #CDCDCD;
+        border-bottom: 1px solid #CDCDCD;
+        padding: 28px;
+    }
+
+    .grid-amount,
+    .grid-price {
+        flex-direction: row-reverse;
+    }
+
+    .h3-adds:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 50vw;
+        background: #68B738;
+        top: calc(50% - 1px);
+        right: calc(100% + 25px);
+    }
+}
+
+.line-container {
+
+    mwrgin-top: 100px;
+    position: relative;
+    width: 100%;
+    border: 2px solid green;
+    height: 1px;
+    top: -20px;
+    z-index: 1;
+
+    margin-bottom: 100px;
+}
+
+.line-h3 {
+    position: relative;
+    max-width: 40vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: red;
+    z-index: 2;
+
+
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.line-background {
+    color:yellow;
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 3px;
+
+    background-color: black;
+
+
+    z-index: 1;
+}
+
+.loader {
+    margin: 250px auto;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.flex-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.pages-container {
+    height: 50px;
 }
